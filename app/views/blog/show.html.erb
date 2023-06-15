@@ -3,3 +3,7 @@
 <p><%=link_to 'Back to main page', blogs_path%></p>
 
 <%= button_to 'Delete Blog', delete_blog_path(@blog), method: :delete %>
+
+<%=form_with model: @blog do |form|%>
+<%= form.button link_to 'Edit Post', edit_blog_path %>
+<% end %>

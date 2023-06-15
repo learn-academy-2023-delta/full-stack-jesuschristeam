@@ -4,5 +4,8 @@
 <% @blogs.each do |blog|%>
 <li><%= link_to blog.title, blog_path(blog) %></li>
 <% end %>
-<ul>
+</ul>
 
+<%=form_with model: @blog do |form|%>
+<%= form.button link_to 'New Post', new_path %>
+<% end %>
